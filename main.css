@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f3f1f1;
+    color: #282e28;
+}
+
+h2, .product-title {
+    margin-bottom: 16px;
+    border-bottom: 2px solid #282e28;
+    padding-bottom: 16px;
+    font-family: 'Anton', sans-serif;
+    font-weight: bold;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+.header {
+    padding: 16px 0;
+    background-color: #282e28;
+    color: #f3f1f1;
+}
+
+.header .container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.header nav ul li {
+    margin-left: 32px;
+}
+
+.header nav ul li a {
+    color: #f3f1f1;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.about {
+    padding: 24px 0;
+    width: 100%;
+}
+
+.about .container-flex {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: flex-start;
+}
+
+.about .store-front {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-right: 32px;
+    align-self: center;
+}
+
+.products {
+    padding: 24px 0;
+    width: 100%;
+}
+
+.products .container.lista-veiculos {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.products nav ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+}
+
+.products nav ul li {
+    flex: 1 1 calc(25% - 32px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: calc(25% - 32px);
+}
+
+.products nav ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.products nav ul li p {
+    font-size: 16px;
+    margin-bottom: 8px;
+    text-align: left;
+    width: 100%;
+}
+
+.products nav ul li strong {
+    font-size: 18px;
+    display: block;
+    margin-bottom: 8px;
+    text-align: center;
+    width: 100%;
+}
+
+.products nav ul li button {
+    padding: 8px 16px;
+    background-color: #282e28;
+    color: #f3f1f1;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.products nav ul li button:hover {
+    background-color: #3a3f3a;
+}
+
+@media (min-width: 641px) and (max-width: 1023px) {
+    .about .container-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .store-front {
+        max-width: 800px;
+        margin-bottom: 16px;
+        margin-right: 0;
+    }
+
+    .products .container.lista-veiculos nav ul {
+        gap: 32px;
+    }
+
+    .products nav ul li {
+        flex: 1 1 calc(50% - 16px);
+        max-width: calc(50% - 16px);
+    }
+}
+
+@media (max-width: 640px) {
+    .header .container {
+        display: flex;
+    }
+
+    .header nav ul {
+        display: block;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 8px;
+    }
+
+    .header nav ul li {
+        margin-left: 8px;
+        margin-bottom: 8px;
+    }
+
+    .about .container-flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about .store-front {
+        margin: 0 0 16px 0;
+    }
+
+    .products .container.lista-veiculos nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .products .container.lista-veiculos nav ul li {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
